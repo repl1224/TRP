@@ -8,6 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,6 +35,7 @@ public class SampleController {
      */
     @ApiOperation(value = "events", tags = "리뷰 이벤트")
     @PostMapping(value = "/events")
+    @Transactional(rollbackFor = Exception.class)
     public ResponseEntity<?> editReview(@RequestParam("reviewInfo") String param) throws ParseException {
     	int result = reviewService.editReview(param);
     	
@@ -62,6 +64,7 @@ public class SampleController {
      */
     @ApiOperation(value = "getScoreSum", tags = "사용자별 리뷰 보상점수 합")
     @GetMapping(value = "/getScoreSum")
+    @Transactional(rollbackFor = Exception.class)
     public ResponseEntity<?> getScoreSum(@RequestParam("userInfo") String param) throws ParseException {
     	Long score = reviewService.getScoreSum(param);
     	
