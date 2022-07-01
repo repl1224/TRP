@@ -3,7 +3,7 @@
 트리플 여행자 클럽 마일리지 서비스 설명
 
 # 실행방법
-- 개발IDE에 소스를 pull 받으신 후 spring boot application을 실행하여 API를 확인하실 수 있습니다.
+- 개발IDE에 프로젝트를 import 받으신 후 spring boot application을 실행하여 API를 확인하실 수 있습니다.
 
 # 개발환경
 - 개발 환경은 Spring boot, jpa를 사용하였습니다.
