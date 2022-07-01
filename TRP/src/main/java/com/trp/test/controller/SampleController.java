@@ -57,6 +57,7 @@ public class SampleController {
     	}
     }
     
+    
     /**
      * 사용자별 리뷰 보상점수 합을 구한다
      * @param reviewInfo 리뷰 정보 JSONObject
